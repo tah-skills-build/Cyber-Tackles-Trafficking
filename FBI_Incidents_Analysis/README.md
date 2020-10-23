@@ -8,7 +8,7 @@ So, what is this project all about?
 
 The main goal is to provide you with hands-on experience in working with a real human trafficking dataset. You’ll also get experience navigating GitHub, use Terminal or Command Prompt to lay the groundwork for data analysis, and become more comfortable using Python and Jupyter Notebook to explore and visualize a dataset. 
 
-There are no right or wrong answers, no assessment, and this data analysis project doesn’t build directly off of what you learned in SkillsBuild (though it’ll certainly help that you went through those courses). It’s more about exploration and discovery. Also, don’t worry if this is your first time using Python or Jupyter Notebook. 
+You do not need to have coding experience. There are no right or wrong answers, no assessment, and this data analysis project doesn’t build directly off of what you learned in SkillsBuild (though it’ll certainly help that you went through those courses). It’s more about exploration and discovery. Also, don’t worry if this is your first time using Python or Jupyter Notebook. 
 
 <i>*Jupyter Notebook is a free web application where you can work with data (cleaning, visualization, etc.), while receiving guidance directly within the coding interface. If you want to learn more about Jupyter Notebook, including basic operations, start here https://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Notebook%20Basics.html</i>
 
@@ -30,7 +30,8 @@ Below you’ll find step-by-step instructions to get you set up and ready to do 
 <i>*Often, typing an error message in Google search will point you to a Stack Overflow (https://stackoverflow.com/) thread that can help you troubleshoot. We’ve also provided some tips below for what to do if you get stuck at certain points.</i>
 
 <b>STEP 1:</b><br>
-You will use the Python programming language to do the data analysis for this project, by running and modifying some code we provide you with in Jupyter Notebook. So, you will need to install Python if you don’t already have it (it’s free). 
+<br>
+The Python programming language is what is used in the Jupyter Notebook analysis. So, you will need to install Python if you don’t already have it (it’s free). 
  
 1.	Go to https://www.python.org/downloads/
 
@@ -56,25 +57,27 @@ Clone the Cyber Tackles Trafficking GitHub repository to your local computer, by
 
 <b>STEP 3:</b><br>
 
-Open Terminal (Mac) or Command Prompt (Windows). Not sure how? Read this!
+Open Terminal (Mac) or Command Prompt (Windows). You can search for these tools by using Spotlight Search for Mac, or the search function or start menu search option for Windows.
 
 <b>For Mac users</b><br>
 
-1.	In Terminal, cd to the “FBI_Incidents_Analysis” folder by typing the letters cd followed by a space, then entering the address of the folder on your computer (simply right-click on the “FBI_Incidents_Analysis” folder to copy its address, then paste that information in Terminal), then hitting Enter
+1.	In Terminal, <code>cd</code> to the “FBI_Incidents_Analysis” folder by typing the letters cd followed by a space, then entering the address of the folder on your computer (simply right-click on the “FBI_Incidents_Analysis” folder to copy its address, then paste that information in Terminal), then hitting Enter. Depending on where you saved the folder, the address that you copy and paste may look something like this: <code>/Users/YourName/Desktop/Cyber-Tackles-Trafficking-master/FBI_Incidents_Analysis</code>
 
-2.	Next, type sh setup.sh in Terminal and hit Enter, which will install the Python libraries that you’ll need, and will also automatically download the FBI data files for you (take a look at the files called setup.sh, requirements.txt, and main.py in your project folder, to better understand what’s happening here)* 
+2.	Next, type <code>sh setup.sh</code> in Terminal and hit Enter, which will install the Python libraries that you’ll need, and will also automatically download the FBI data files for you (take a look at the files called setup.sh, requirements.txt, and main.py in your project folder, to better understand what’s happening here)* 
 
-3.	The FBI data for Wisconsin, 2012-2018, is now cleaned up and stored locally on your computer in the crawl_data_output folder (which can be found within the “Data_Source” folder, located in your “FBI_Incidents_Analysis” folder). When you see “Data is exported as csv” in Terminal, it means the data is now ready for analysis**
+3.	The FBI data for Wisconsin, 2012-2018, is now cleaned up and stored locally on your computer in the crawl_data_output folder, which you can find within the “Data Source” folder, located in your “FBI_Incidents_Analysis” folder). 
 
-<i>*You might see a pop-up asking if you’d like to install “command line developer tools.” If you are not able to complete this process due to receiving an error message, you can instead go here to search for and download Command Line Tools. Once you have Command Line Tools installed, you can go back into Terminal and type sh setup.sh again. </i>
+4. When you see “Data is exported as csv” in Terminal, it means the data is now ready for analysis**
 
-<i>** You might get an error in Terminal that prevents the crawl_data_output folder from being created. If you see “ImportError: No module named requests” in Terminal instead of “Data is exported as csv,” try the following: Type cd Data_Source in Terminal, hit Enter, then type python3.7 main.py and hit Enter. This should solve the problem, and you should now see the crawl_data_output folder within your Data_Source folder.</i>
+<i>*You might see a pop-up asking if you’d like to install “command line developer tools.” If you are not able to complete this process due to receiving an error message, you can instead go here (https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Fdownload%2Fmore%2F%3F%3Dcommand%2520line%2520tools&rv=1) to search for and download Command Line Tools. Once you have Command Line Tools installed, you can go back into Terminal and type <code>sh setup.sh</code> again. </i>
+
+<i>** You might get an error in Terminal that prevents the crawl_data_output folder from being created. If you see “ImportError: No module named requests” in Terminal instead of “Data is exported as csv,” try the following: Type <code>cd Data_Source</code> in Terminal, hit Enter, then type <code>python3.7 main.py</code> and hit Enter. This should solve the problem, and you should now see the crawl_data_output folder within your Data_Source folder.</i>
 
 <b>For Windows users</b><br>
 
-1.	In Command Prompt, cd to the “FBI_Incidents_Analysis” folder by typing the letters cd followed by a space, then entering the address of the folder on your computer (simply right-click on the “FBI_Incidents_Analysis” folder to copy its address, then paste that information in Command Line), then hitting Enter. Depending on where you saved the folder, the address that you copy and paste may look something like this: <i> C:\Users\YourName\Desktop\Cyber-Tackles-Trafficking-master\Cyber-Tackles-Trafficking-master\FBI_Incidents_Analysis </i>
+1.	In Command Prompt, <code>cd</code> to the “FBI_Incidents_Analysis” folder by typing the letters cd followed by a space, then entering the address of the folder on your computer (simply right-click on the “FBI_Incidents_Analysis” folder to copy its address, then paste that information in Command Line), then hitting Enter. Depending on where you saved the folder, the address that you copy and paste may look something like this: <i><code> C:\Users\YourName\Desktop\Cyber-Tackles-Trafficking-master\Cyber-Tackles-Trafficking-master\FBI_Incidents_Analysis </i></code>
 
-2.	Next, type setup.bat in Command Prompt and hit Enter, which will install the Python libraries that you’ll need, and will also automatically download the FBI data files for you (take a look at the files called setup.bat, requirements.txt, and main.py in your project folder, to better understand what’s happening here)
+2.	Next, type <code>setup.bat</code> in Command Prompt and hit Enter, which will install the Python libraries that you’ll need, and will also automatically download the FBI data files for you (take a look at the files called setup.bat, requirements.txt, and main.py in your project folder, to better understand what’s happening here)
 
 3.	The FBI data for Wisconsin, 2012-2018, is now cleaned up and stored locally on your computer in the crawl_data_output folder, which you can find within the “Data Source” folder, located in your “FBI_Incidents_Analysis” folder)
 
@@ -84,6 +87,6 @@ Open Terminal (Mac) or Command Prompt (Windows). Not sure how? Read this!
 
 Finally, cd to your “FBI_Incidents_Analysis” folder again (just like you did in Step 3 above); then type the words jupyter notebook in Terminal or Command Line and hit Enter to launch Jupyter Notebook in your web browser. 
 
-Next, click on the file called “HumanTrafficking_Incidents_Analysis.ipynb” to import the dataset and launch the project notebook – then simply follow the instructions as you go through the notebook to do some basic analysis
+Next, click on the file called “HumanTrafficking_Incidents_Analysis.ipynb” to import the dataset and launch the project notebook – then simply read through the notebook to review and engage with some basic data analysis and data visualizations.
 
 Good luck!
